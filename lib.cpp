@@ -22,11 +22,8 @@ void inserimento(char mat[], int n) {
     char mat10000[10000];
     init(mat10000, 10000);
     cin >> mat10000;
-
-    int i = 0;
-    while (i < n && mat10000[i] != '\0') {
-        mat[i] = mat10000[i];
-        i++;
+    for(int i=0;i<n;i++){
+        mat[i]=num[i];
     }
 }
 
