@@ -1,3 +1,7 @@
+//
+// Created by Bolzo on 06/06/2023.
+//
+
 #include <iostream>
 #include "lib.h"
 using namespace std;
@@ -14,9 +18,15 @@ void init(char mat[5][15]){
     }
 }
 
-void inserimento(char a[],int d ){
-    for(int i=0;i<d;i++){
-        cin >> a[i];
+void inserimento(char mat[], int n) {
+    char mat10000[10000];
+    init(mat10000, 10000);
+    cin >> mat10000;
+
+    int i = 0;
+    while (i < n && mat10000[i] != '\0') {
+        mat[i] = mat10000[i];
+        i++;
     }
 }
 
@@ -44,3 +54,4 @@ int ricerca(char nomi[5][15], char cognomi[5][15], char nome[15], char cognome[1
     }
     return -1;
 }
+
